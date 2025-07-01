@@ -14,4 +14,6 @@ public class GameManager : MonoBehaviour
         if (isServer) NetworkManager.Singleton.StartHost();
         else NetworkManager.Singleton.StartClient();
     }
+
+
 }

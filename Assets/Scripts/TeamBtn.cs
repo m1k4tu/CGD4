@@ -10,29 +10,34 @@ public class TeamBtn : MonoBehaviour
     [SerializeField] private Button YellowBtn;
     [SerializeField] private Button GreenBtn;
 
+    public PlayerStats Player;
     private void Awake()
     {
+       // if (NetworkManager.Singleton.IsServer) DisableBTNS();
 
         RedBtn.onClick.AddListener(() =>
         {
+            Player.SetTeam(0);
             NetworkManager.Singleton.StartClient();
-            disableBTNS();                                          //so as to free screen space. theoretically could do a stop func o
+            DisableBTNS();                                          //so as to free screen space. theoretically could do a stop func o
         });
 
         YellowBtn.onClick.AddListener(() =>
         {
+            Player.SetTeam(1);
             NetworkManager.Singleton.StartHost();
-            disableBTNS();
+            DisableBTNS();
         });
 
         GreenBtn.onClick.AddListener(() =>
         {
+            Player.SetTeam(2);
             NetworkManager.Singleton.StartClient();
-            disableBTNS();
+            DisableBTNS();
         });
     }
 
-    public void disableBTNS()
+    public void DisableBTNS()
     {
         RedBtn.gameObject.SetActive(false);
         YellowBtn.gameObject.SetActive(false);
