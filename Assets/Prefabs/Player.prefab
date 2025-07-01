@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6092961492075130145
 Transform:
   m_ObjectHideFlags: 0
@@ -233,6 +233,9 @@ MonoBehaviour:
     m_InternalValue: 0
   playerScore:
     m_InternalValue: 0
+  Team:
+    m_InternalValue: 0
+  text: {fileID: 0}
 --- !u!114 &-6671700310950631830
 MonoBehaviour:
   m_ObjectHideFlags: 0
